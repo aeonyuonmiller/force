@@ -1,10 +1,25 @@
-import React from 'react'
+import { motion } from 'framer-motion'
 import { PrismicRichText } from '@prismicio/react'
 // import Image from 'next/image'
 
+const animation = {
+  initial: { opacity: 1, scale: 1.1 },
+  animate: { opacity: 1, scale: 1, transition: { easing:"ease", duration: 2 }},
+  exit: { opacity: 0, scale: 1.1 }
+}
+
 const Card = ({ slice }) => (
   <section className='card' style={{ background: slice.primary.bgColor }}>
-    <img width="100%" src={slice.primary.backgroundImage.url} alt={slice.primary.backgroundImage.alt} />
+    <motion.img 
+      width="100%" 
+      variants={animation} 
+      initial="initial" 
+      whileInView="animate" 
+      exit="exit" 
+      viewport={{ once: true }} 
+      src={slice.primary.backgroundImage.url} 
+      alt={slice.primary.backgroundImage.alt} 
+    />
     <div className='content'>
       <PrismicRichText field={slice.primary.title} />
       <PrismicRichText field={slice.primary.body} />

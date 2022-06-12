@@ -11,8 +11,6 @@ import { components } from '../slices'
 
 export default function Home({ page }) {
   
-  console.log(page);
-
   return (
     <div className={styles.container}>
       <Head>
