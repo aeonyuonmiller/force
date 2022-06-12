@@ -22,6 +22,7 @@ a {
   margin: 3rem auto;
   /* width: clamp(18.75rem, 11.932rem + 34.09vw, 37.5rem); */
   width: 90%;
+  max-width: 900px;
   border-radius: 2em;
   transform: scale3d(1,1,1);
   overflow: hidden;
@@ -34,7 +35,7 @@ a {
 }
 
 .card p:last-child{
-  padding-bottom: 2rem;
+  padding-bottom: .5rem;
 }
 
 .card:hover, .card:focus{
@@ -42,12 +43,22 @@ a {
 }
 
 button{
-  padding: 1em 2em;
+  padding: .1em 2em;
   border: none;
   border-radius: 60px;
   transition: transform ease-out .2s;
 }
 
 button:hover, button:focus{
+  background: white;
   transform: scale3d(.98,.98,.98);
+}
+
+.layout{
+  position: absolute;
+  width: 100%;
+  top: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
