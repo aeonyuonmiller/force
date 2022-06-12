@@ -1,6 +1,6 @@
 ## Setup
 
-• Next.js
-• Framer Motion
-• Prismic
+- [x] Next.js
+- [x] Framer Motion
+- [x] Prismic
 - [ ] SnipCart
