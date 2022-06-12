@@ -1,0 +1,75 @@
+{
+  "id": "card",
+  "type": "SharedSlice",
+  "name": "Card",
+  "description": "Card",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Card",
+      "primary": {
+        "backgroundImage": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
+          }
+        },
+        "body": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Body",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "buttonText": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Button Text",
+            "placeholder": "Okey",
+            "allowTargetBlank": true,
+            "single": "heading5"
+          }
+        },
+        "bgColor": {
+          "type": "Color",
+          "config": {
+            "label": "Bg Color",
+            "placeholder": ""
+          }
+        },
+        "buttonColor": {
+          "type": "Color",
+          "config": {
+            "label": "Button Color",
+            "placeholder": ""
+          }
+        },
+        "textColor": {
+          "type": "Color",
+          "config": {
+            "label": "Text Color",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

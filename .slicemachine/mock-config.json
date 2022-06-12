@@ -1,0 +1,48 @@
+{
+  "_cts": {
+    "page": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "homepage": {}
+  },
+  "slices": {
+    "Card": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "buttonText": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "body": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "bgColor": {
+            "content": "#37d67a"
+          },
+          "buttonColor": {
+            "content": "#d9e3f0"
+          },
+          "textColor": {
+            "content": "#111"
+          }
+        }
+      }
+    }
+  }
+}

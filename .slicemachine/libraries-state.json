@@ -1,0 +1,141 @@
+{
+  "slices": {
+    "components": {
+      "card": {
+        "library": "slices",
+        "id": "card",
+        "name": "Card",
+        "description": "Card",
+        "model": {
+          "id": "card",
+          "type": "SharedSlice",
+          "name": "Card",
+          "description": "Card",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Card",
+              "primary": {
+                "backgroundImage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Background Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
+                  }
+                },
+                "body": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Body",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph"
+                  }
+                },
+                "buttonText": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Button Text",
+                    "placeholder": "Okey",
+                    "allowTargetBlank": true,
+                    "single": "heading5"
+                  }
+                },
+                "bgColor": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Bg Color",
+                    "placeholder": ""
+                  }
+                },
+                "buttonColor": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Button Color",
+                    "placeholder": ""
+                  }
+                },
+                "textColor": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Text Color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "card",
+            "items": [],
+            "primary": {
+              "backgroundImage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": "Placeholder image",
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+              },
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Syndicate leading-edge applications",
+                  "spans": []
+                }
+              ],
+              "body": [
+                {
+                  "type": "paragraph",
+                  "text": "Non ullamco sint nisi voluptate eu deserunt officia ad elit tempor.",
+                  "spans": []
+                }
+              ],
+              "buttonText": [
+                {
+                  "type": "heading5",
+                  "text": "Recontextualize visionary portals",
+                  "spans": []
+                }
+              ],
+              "bgColor": "#37d67a",
+              "buttonColor": "#d9e3f0",
+              "textColor": "#52e3b5"
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/aeonyuonmiller/Desktop/codes/force/.slicemachine/assets/slices/Card/default/preview.png",
+            "width": 800,
+            "height": 615
+          }
+        }
+      }
+    }
+  }
+}
