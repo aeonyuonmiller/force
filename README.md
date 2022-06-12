@@ -1,3 +1,6 @@
-## Getting Started
+## Setup
 
-First
+• Next.js
+• Framer Motion
+• Prismic
+- [ ] SnipCart
