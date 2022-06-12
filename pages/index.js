@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
 // import Image from 'next/image'
@@ -9,8 +10,11 @@ import { createClient } from '../prismicio'
 import { SliceZone, PrismicRichText } from '@prismicio/react'
 import { components } from '../slices'
 
+import { useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export default function Home({ page }) {
+
+  // const { scroll } = useLocomotiveScroll()
   
   return (
     <div>

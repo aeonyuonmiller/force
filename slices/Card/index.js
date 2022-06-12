@@ -4,7 +4,7 @@ import { PrismicRichText } from '@prismicio/react'
 
 // animates the image
 const zoom = {
-  initial: { opacity: 1, scale: 1.1, transition: { easing:"ease", duration: 3 } },
+  initial: { opacity: 1, scale: 1.1 },
   animate: { opacity: 1, scale: 1, transition: { easing:"ease", duration: 2 }},
   exit: { opacity: 0, scale: 1.1 }
 }
@@ -29,7 +29,7 @@ const Card = ({ slice }) => (
       initial="initial" 
       whileInView="animate" 
       exit="exit" 
-      viewport={{ once: false, amount: 0.1 }} 
+      viewport={{ once: false, amount: 0.2 }} 
       src={slice.primary.backgroundImage.url} 
       alt={slice.primary.backgroundImage.alt} 
     />

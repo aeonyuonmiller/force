@@ -5,6 +5,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background: rgb(230, 230, 230);
+  overscroll-behavior-y: none;
 }
 
 a {
@@ -16,13 +17,22 @@ a {
   box-sizing: border-box;
 }
 
+.App {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .card{
   background: rgb(76, 64, 89);
   color: azure;
   margin: 3rem auto;
   /* width: clamp(18.75rem, 11.932rem + 34.09vw, 37.5rem); */
   width: 90%;
-  max-width: 900px;
+  max-width: 600px;
   border-radius: 2em;
   transform: scale3d(1,1,1);
   overflow: hidden;
@@ -33,11 +43,9 @@ a {
   padding: 0 2rem 2rem 2rem;
   max-width: 62ch;
 }
-
 .card p:last-child{
   padding-bottom: .5rem;
 }
-
 .card:hover, .card:focus{
   transform: scale3d(.99,.99,.99);
 }
@@ -48,7 +56,6 @@ button{
   border-radius: 60px;
   transition: transform ease-out .2s;
 }
-
 button:hover, button:focus{
   background: white;
   transform: scale3d(.98,.98,.98);

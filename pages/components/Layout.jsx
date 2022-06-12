@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
-    <div className='layout'>{children}</div>
+    <div data-scroll-section className='layout'>{children}</div>
   )
 }
 
