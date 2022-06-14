@@ -2,7 +2,7 @@ import React from 'react'
 
 const Layout = ({ children }) => {
   return (
-    <div data-scroll-section className='layout'>{children}</div>
+    <div className='layout'>{children}</div>
   )
 }
 

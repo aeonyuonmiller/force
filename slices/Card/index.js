@@ -2,6 +2,12 @@ import { motion } from 'framer-motion'
 import { PrismicRichText } from '@prismicio/react'
 // import Image from 'next/image'
 
+// animates card
+const card = {
+  initial: { y:100, opacity:0 },
+  animate: { y: 0, opacity:1 }
+}
+
 // animates the image
 const zoom = {
   initial: { opacity: 1, scale: 1.1 },
@@ -22,7 +28,7 @@ const container = {
 }
 
 const Card = ({ slice }) => (
-  <section className='card' style={{ background: slice.primary.bgColor }}>
+  <motion.section variants={card} initial="initial" whileInView="animate" className='card' style={{ background: slice.primary.bgColor }}>
     <motion.img 
       width="100%" 
       variants={zoom} 
@@ -42,10 +48,10 @@ const Card = ({ slice }) => (
       <motion.span><PrismicRichText field={slice.primary.title} /></motion.span>
       <motion.span><PrismicRichText field={slice.primary.body} /></motion.span>
       <motion.button style={{ background: slice.primary.buttonColor }}>
-        <PrismicRichText style={{color: slice.primary.textColor}} field={slice.primary.buttonText} />
+        <span style={{color: slice.primary.textColor}}><PrismicRichText field={slice.primary.buttonText} /></span>
       </motion.button>
     </motion.div>
-  </section>
+  </motion.section>
 )
 
 export default Card
