@@ -15,15 +15,25 @@ const zoom = {
   exit: { opacity: 0, scale: 1.1 }
 }
 
-// animtes the content items
+// animtes the content
 const container = {
-  initial: { rotate: 9 },
+  initial: { y: 50 },
   animate: {
-      rotate: 0,
+    y: 0,
       transition: {
           staggerChildren: 0.1,
           delayChildren: 0.3,
       },
+  },
+}
+
+// animtes the content items
+const item = {
+  initial: { y: 50, opacity: 0 },
+  animate: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: .4 }
   },
 }
 
@@ -45,9 +55,9 @@ const Card = ({ slice }) => (
       initial="initial"
       whileInView="animate"
     >
-      <motion.span><PrismicRichText field={slice.primary.title} /></motion.span>
-      <motion.span><PrismicRichText field={slice.primary.body} /></motion.span>
-      <motion.button style={{ background: slice.primary.buttonColor }}>
+      <motion.span variants={item}><PrismicRichText field={slice.primary.title} /></motion.span>
+      <motion.span variants={item}><PrismicRichText field={slice.primary.body} /></motion.span>
+      <motion.button whileHover={{ scale:0.97, cursor: "pointer" }} variants={item} style={{ background: slice.primary.buttonColor }}>
         <span style={{color: slice.primary.textColor}}><PrismicRichText field={slice.primary.buttonText} /></span>
       </motion.button>
     </motion.div>

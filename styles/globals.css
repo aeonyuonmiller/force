@@ -39,7 +39,7 @@ a {
 }
 .card .content {
   padding: 0 2rem 2rem 2rem;
-  max-width: 62ch;
+  max-width: 36ch;
 }
 .card p:last-child{
   padding-bottom: .5rem;
@@ -47,6 +47,8 @@ a {
 .card:hover, .card:focus{
   transform: scale3d(.99,.99,.99);
 }
+
+h2, p, .container { position: relative; }
 
 button{
   padding: .1em 2em;
