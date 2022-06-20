@@ -6,10 +6,7 @@ import { PrismicRichText } from '@prismicio/react'
 // animates card
 const card = {
   initial: { y:100, opacity:0 },
-  animate: { y: 0, opacity:1, transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.5,
-}, }
+  animate: { y: 0, opacity:1, }
 }
 
 // animates the image

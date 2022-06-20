@@ -18,6 +18,7 @@
     "framer-motion": "^6.3.11",
     "locomotive-scroll": "^4.1.4",
     "next": "12.1.6",
+    "prismic-javascript": "^3.0.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "yarn": "^1.22.19"

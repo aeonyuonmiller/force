@@ -13,7 +13,7 @@ const LiveSign = (props) => {
       initial="initial" 
       whileInView="animate" 
       className='live'>
-        <motion.div animate={{ opacity: [0,1,0], transition:{repeat: Infinity, duration: 1}}} className='live-dot' />
+        <motion.div animate={{ opacity: [0,1,0], scale: [1,1.2,1], transition:{repeat: Infinity, duration: 1, times: [0, 0.3, 1]}}} className='live-dot' />
         {props.text}
     </motion.div>
   )
