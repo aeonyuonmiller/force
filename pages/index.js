@@ -11,6 +11,7 @@ import { SliceZone, PrismicRichText } from '@prismicio/react'
 import { components } from '../slices'
 import LiveSign from './components/LiveSign'
 
+
 export default function Home({ page }) {
 
 
@@ -28,8 +29,8 @@ export default function Home({ page }) {
           <Logo />
         </main>
 
-        <Layout>
           <PrismicRichText field={page.data.title} />
+        <Layout>
           <SliceZone slices={page.data.slices} components={components} />
         </Layout>
       

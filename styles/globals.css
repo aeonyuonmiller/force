@@ -62,11 +62,13 @@ button:hover, button:focus{
 }
 
 .layout{
-  position: absolute;
-  width: 100%;
+  position: relative;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
   top: 70vh;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
 }
 
@@ -82,13 +84,23 @@ button:hover, button:focus{
 
 .live{
   position: absolute;
+  display: flex;
+  align-items: center;
   top: 3em;
   right: 3em;
   background: rgb(255, 99, 71);
   color: white;
   border-radius: 30px;
-  padding: .5em 1em;
+  padding: .5em 1em .5em .8em;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: -0.001rem;
+}
+
+.live-dot{
+  background: white;
+  border-radius: 30px;
+  margin-right: 8px;
+  width: 8px;
+  height: 8px;
 }

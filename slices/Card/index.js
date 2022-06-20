@@ -1,11 +1,15 @@
 import { motion } from 'framer-motion'
 import { PrismicRichText } from '@prismicio/react'
+
 // import Image from 'next/image'
 
 // animates card
 const card = {
   initial: { y:100, opacity:0 },
-  animate: { y: 0, opacity:1 }
+  animate: { y: 0, opacity:1, transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.5,
+}, }
 }
 
 // animates the image
@@ -45,7 +49,7 @@ const Card = ({ slice }) => (
       initial="initial" 
       whileInView="animate" 
       exit="exit" 
-      viewport={{ once: false, amount: 0.2 }} 
+      viewport={{ once: false, margin: "200px", amount: 0.2 }} 
       src={slice.primary.backgroundImage.url} 
       alt={slice.primary.backgroundImage.alt} 
     />
