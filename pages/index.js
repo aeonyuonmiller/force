@@ -14,14 +14,13 @@ import LiveSign from "./components/LiveSign";
 export default function Home({ page }) {
   return (
     <>
+      <Script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></Script>
       <Head>
         <title>FORCE</title>
         <meta
           name="description"
           content="FORCE Recordings – industrial acid techno"
         />
-        <link rel="preconnect" href="<https://app.snipcart.com>" />
-        <link rel="preconnect" href="<https://cdn.snipcart.com>" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

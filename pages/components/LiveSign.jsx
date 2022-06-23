@@ -1,11 +1,16 @@
 import { motion } from 'framer-motion'
+// import { useSnipcart } from 'use-snipcart'
+
 
 const fromRight = {
-    initial: { scale: 0, opacity: 0 },
-    animate: { scale: 1, opacity: 1 }
+  initial: { scale: 0, opacity: 0 },
+  animate: { scale: 1, opacity: 1 }
 }
 
 const LiveSign = (props) => {
+  // const { cart = {} } = useSnipcart();
+  // const { subtotal = "0.00" } = cart;
+
   return (
     <motion.div 
       variants={fromRight} 

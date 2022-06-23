@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SnipcartProvider } from "use-snipcart/useSnipcart";
 import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { linkResolver, repositoryName } from "../prismicio";
@@ -23,7 +24,9 @@ export default function App({ Component, pageProps }) {
           id="snipcart"
           data-api-key="https://force-recs.prismic.io/api/v2"
         ></div>
-        <Component {...pageProps} />
+        <SnipcartProvider>
+          <Component {...pageProps} />
+        </SnipcartProvider>
       </PrismicPreview>
     </PrismicProvider>
   );
