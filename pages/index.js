@@ -11,7 +11,12 @@ import { SliceZone, PrismicRichText } from "@prismicio/react";
 import { components } from "../slices";
 import LiveSign from "./components/LiveSign";
 
+import { useSnipcart } from "use-snipcart/useSnipcart";
+
 export default function Home({ page }) {
+  const { cart = {} } = useSnipcart();
+  console.log("cart", cart);
+
   return (
     <>
       <Script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></Script>
