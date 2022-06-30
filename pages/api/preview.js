@@ -1,37 +1,37 @@
-import Prismic from 'prismic-javascript'
-import {linkResolver} from '../../prismic-configuration'
+import Prismic from "prismic-javascript";
+import { linkResolver } from "../../prismicio";
 
-const apiEndpoint = process.env.PRISMIC_API_URL
-const accessToken = process.env.PRISMIC_TOKEN
+const apiEndpoint = process.env.PRISMIC_API_URL;
+const accessToken = process.env.PRISMIC_TOKEN;
 
 // Client method to query from the Prismic repo
 const Client = (req = null) =>
-  Prismic.client(apiEndpoint, createClientOptions(req, accessToken))
+  Prismic.client(apiEndpoint, createClientOptions(req, accessToken));
 
 const createClientOptions = (req = null, prismicAccessToken = null) => {
-  const reqOption = req ? {req} : {}
+  const reqOption = req ? { req } : {};
   const accessTokenOption = prismicAccessToken
-    ? {accessToken: prismicAccessToken}
-    : {}
+    ? { accessToken: prismicAccessToken }
+    : {};
   return {
     ...reqOption,
     ...accessTokenOption,
-  }
-}
+  };
+};
 
 const Preview = async (req, res) => {
-  const {token: ref, documentId} = req.query
+  const { token: ref, documentId } = req.query;
   const redirectUrl = await Client(req)
     .getPreviewResolver(ref, documentId)
-    .resolve(linkResolver, '/')
+    .resolve(linkResolver, "/");
 
   if (!redirectUrl) {
-    return res.status(401).json({message: 'Invalid token'})
+    return res.status(401).json({ message: "Invalid token" });
   }
 
-  res.setPreviewData({ref})
-  res.writeHead(302, {Location: `${redirectUrl}`})
-  res.end()
-}
+  res.setPreviewData({ ref });
+  res.writeHead(302, { Location: `${redirectUrl}` });
+  res.end();
+};
 
-export default Preview
+export default Preview;

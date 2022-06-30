@@ -1,8 +1,9 @@
-import { useContext } from "react";
+// import { useContext } from "react";
 // import Link from 'next/link'
 import Head from "next/head";
 import Script from "next/script";
 // import Image from 'next/image'
+import { motion } from "framer-motion";
 import Logo from "./components/Logo";
 import Layout from "./components/Layout";
 
@@ -10,7 +11,6 @@ import { createClient } from "../prismicio";
 import { SliceZone, PrismicRichText } from "@prismicio/react";
 import { components } from "../slices";
 import LiveSign from "./components/LiveSign";
-
 import { useSnipcart } from "use-snipcart/useSnipcart";
 
 export default function Home({ page }) {
@@ -20,6 +20,7 @@ export default function Home({ page }) {
   return (
     <>
       <Script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></Script>
+      <Script src="https://static.cdn.prismic.io/prismic.js?new=true&repo=force-recs" />
       <Head>
         <title>FORCE</title>
         <meta
@@ -28,8 +29,6 @@ export default function Home({ page }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <Script src="https://static.cdn.prismic.io/prismic.js?new=true&repo=force-recs" />
 
       <main className="main">
         <Logo />
@@ -40,6 +39,20 @@ export default function Home({ page }) {
       <Layout>
         <SliceZone slices={page.data.slices} components={components} />
       </Layout>
+
+      <motion.button
+        initial={{ opacity: 0, y: 20 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          cursor: "pointer",
+          transition: { duration: 1, delay: 1 },
+        }}
+        className="snipcart-checkout"
+      >
+        •<span className="snipcart-items-count"></span> &mdash;{" "}
+        <span className="snipcart-total-price"></span>
+      </motion.button>
 
       <LiveSign text="Live" />
     </>

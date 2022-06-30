@@ -3,8 +3,8 @@ import { SnipcartProvider } from "use-snipcart/useSnipcart";
 import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 import { linkResolver, repositoryName } from "../prismicio";
-import "../styles/globals.css";
 import "../styles/snipcart.css";
+import "../styles/globals.css";
 import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
@@ -18,12 +18,6 @@ export default function App({ Component, pageProps }) {
       )}
     >
       <PrismicPreview repositoryName={repositoryName}>
-        <Script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></Script>
-        <div
-          hidden
-          id="snipcart"
-          data-api-key="https://force-recs.prismic.io/api/v2"
-        ></div>
         <SnipcartProvider>
           <Component {...pageProps} />
         </SnipcartProvider>

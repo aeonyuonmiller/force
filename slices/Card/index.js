@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { PrismicRichText } from "@prismicio/react";
-
 // import Image from 'next/image'
+import { PrismicNextImage } from "@prismicio/next";
 
 // animates card
 const card = {
@@ -73,6 +73,13 @@ const Card = ({ slice }) => (
         <PrismicRichText field={slice.primary.body} />
       </motion.div>
       <motion.button
+        className="snipcart-add-item card-btn"
+        data-item-url="/"
+        data-item-id={slice.primary.title}
+        data-item-price={slice.primary.price}
+        data-item-description={slice.primary.body}
+        data-item-image={slice.primary.backgroundImage.url}
+        data-item-name={slice.primary.title}
         whileHover={{ scale: 0.97, cursor: "pointer" }}
         variants={item}
         style={{

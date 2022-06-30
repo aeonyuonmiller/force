@@ -13,9 +13,11 @@ export default function Document() {
         <div
           hidden
           id="snipcart"
+          src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"
           data-api-key="ZDRkMTBlNGItMzQyYy00MmZjLWI3MDEtYWZhOTViMmVmMGU3NjM3ODk4MDU4MzkwODcyNzEy"
+          data-config-add-product-behavior="none"
           data-config-modal-style="side"
-        ></div>
+        />
       </body>
     </Html>
   );
