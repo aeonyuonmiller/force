@@ -15,7 +15,7 @@ import { useSnipcart } from "use-snipcart/useSnipcart";
 
 export default function Home({ page }) {
   const { cart = {} } = useSnipcart();
-  console.log("cart", cart);
+  // console.log("cart", cart);
 
   return (
     <>
@@ -33,9 +33,7 @@ export default function Home({ page }) {
       <main className="main">
         <Logo />
       </main>
-
       <PrismicRichText field={page.data.title} />
-
       <Layout>
         <SliceZone slices={page.data.slices} components={components} />
       </Layout>

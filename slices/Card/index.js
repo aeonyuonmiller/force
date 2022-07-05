@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import { PrismicRichText } from "@prismicio/react";
 // import Image from 'next/image'
 import { PrismicNextImage } from "@prismicio/next";
@@ -74,7 +75,7 @@ const Card = ({ slice }) => (
       </motion.div>
       <motion.button
         className="snipcart-add-item card-btn"
-        data-item-url="/"
+        data-item-url={slice.primary.title}
         data-item-id={slice.primary.title}
         data-item-price={slice.primary.price}
         data-item-description={slice.primary.body}

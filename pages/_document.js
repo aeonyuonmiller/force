@@ -6,6 +6,10 @@ export default function Document() {
       <Head>
         <link rel="preconnect" href="<https://app.snipcart.com>" />
         <link rel="preconnect" href="<https://cdn.snipcart.com>" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.Snipcart.com/themes/v3.2.1/default/Snipcart.css"
+        />
       </Head>
       <body>
         <Main />
@@ -13,10 +17,14 @@ export default function Document() {
         <div
           hidden
           id="snipcart"
-          src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"
+          templatesUrl="/snipcart-templates.html"
           data-api-key="ZDRkMTBlNGItMzQyYy00MmZjLWI3MDEtYWZhOTViMmVmMGU3NjM3ODk4MDU4MzkwODcyNzEy"
           data-config-add-product-behavior="none"
           data-config-modal-style="side"
+        />
+        <script
+          src="https://cdn.Snipcart.com/themes/v3.2.1/default/Snipcart.js"
+          async
         />
       </body>
     </Html>

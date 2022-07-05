@@ -43,6 +43,11 @@
           }
         }
       }
+    },
+    "Landscape": {
+      "default": {
+        "items": {}
+      }
     }
   }
 }

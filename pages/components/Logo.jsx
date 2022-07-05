@@ -5,7 +5,8 @@ function Logo() {
   return (
     <motion.svg
       initial={{ opacity:0, y:-20 }}
-      animate={{ opacity:1, y:0 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -100 }}
       transition={{ easing:"ease-out", duration: 1 }}
       drag
       dragConstraints={{

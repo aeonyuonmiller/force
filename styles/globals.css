@@ -38,8 +38,14 @@ p{
   margin-top:0;
 }
 
-.landscape {
-  grid-column-end: span 2;
+.landscape{
+  grid-column: span 2;
+  background: green;
+}
+
+.snipcart-total-price {
+  font-size: 20px;
+  color: #444444;
 }
 
 .card{
