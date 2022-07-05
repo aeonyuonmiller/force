@@ -110,7 +110,10 @@ button:hover, button:focus{
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 8em;
-  top: 90vh;
+  padding-top: 3em;
+-webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+    top: 80vh;
 }
 
 .main {
@@ -137,6 +140,18 @@ button:hover, button:focus{
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: -0.001rem;
+  cursor: pointer;
+}
+
+.anim1{
+  width: 100%;
+  background: white;
+  height: 50vh;
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .live-dot{

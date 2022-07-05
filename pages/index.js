@@ -1,5 +1,5 @@
 // import { useContext } from "react";
-// import Link from 'next/link'
+import Link from "next/link";
 import Head from "next/head";
 import Script from "next/script";
 // import Image from 'next/image'
@@ -43,7 +43,6 @@ export default function Home({ page }) {
         animate={{
           opacity: 1,
           y: 0,
-          cursor: "pointer",
           transition: { duration: 1, delay: 1 },
         }}
         className="snipcart-checkout"
@@ -52,7 +51,11 @@ export default function Home({ page }) {
         <span className="snipcart-total-price"></span>
       </motion.button>
 
-      <LiveSign text="Live" />
+      <Link href="/live">
+        <a>
+          <LiveSign text="Live" />
+        </a>
+      </Link>
     </>
   );
 }
@@ -61,7 +64,7 @@ export default function Home({ page }) {
 export async function getStaticProps() {
   const client = createClient();
 
-  // Page document for our homepage from the CMS.
+  // get Page document from UID ("home")
   const page = await client.getByUID("page", "home");
 
   return {

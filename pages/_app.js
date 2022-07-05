@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRef } from "react";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, MotionConfig } from "framer-motion";
 import { SnipcartProvider } from "use-snipcart/useSnipcart";
 import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
@@ -22,9 +22,11 @@ export default function App({ Component, pageProps, router }) {
     >
       <PrismicPreview repositoryName={repositoryName}>
         <SnipcartProvider>
-          <AnimatePresence exitBeforeEnter={true}>
-            <Component {...pageProps} key={router.route} />
-          </AnimatePresence>
+          <MotionConfig reducedMotion="user">
+            <AnimatePresence exitBeforeEnter={true}>
+              <Component {...pageProps} key={router.route} />
+            </AnimatePresence>
+          </MotionConfig>
         </SnipcartProvider>
       </PrismicPreview>
     </PrismicProvider>
